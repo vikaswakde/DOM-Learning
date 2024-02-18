@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <script>
+
+      const p = document.createElement("p");
+      p.setAttribute("id", "intro");
+      const textBeforeStrong = document.createTextNode("Hello there, nice ");
+      //   const textBetweenStrong = document.createTextNode("to meet ");
+      const strong = document.createElement("strong");
+      strong.textContent = "to meet";
+      const textAfterStrong = document.createTextNode(" you!");
+
+      p.append(textBeforeStrong);
+      p.append(strong);
+      p.append(textAfterStrong);
+      document.body.append(p)
+    </script>
+  </body>
+</html>

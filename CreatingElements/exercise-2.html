@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>Exerise 2</title>
+</head>
+<body>
+  <script>
+
+    const createParagraph = (text, attributes = {}) => {
+      const p = document.createElement("p");
+      p.textContent = text;
+
+      for (const [key, value] of Object.entries(attributes)) {
+        p.setAttribute(key, value);
+      }
+
+      return p;
+    };
+    const p1 = createParagraph("Paragraph 1", { id: "one", class: "one" });
+    const p2 = createParagraph("Paragraph 2", { id: "two", class: "two" });
+    const p3 = createParagraph("Paragraph 3", {
+      "data-customName": "vikas",
+      class: "three",
+    });
+
+    document.body.prepend(p1);
+    document.body.prepend(p2);
+    document.body.prepend(p3);
+  </script>
+</body>

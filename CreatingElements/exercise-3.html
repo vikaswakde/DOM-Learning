@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <title>Exercise 3</title>
+</head>
+<body>
+  <script>
+    const p = document.createElement("p");
+    p.textContent = "Hello, Let the magic begin 🤸‍♂️ ";
+
+    // create and append div
+    const div = document.createElement("div");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+
+    label.textContent = "Enter your name: ";
+    div.append(label);
+    div.append(input);
+
+    // create and append nav
+    const nav = document.createElement("nav");
+    const ul = document.createElement("ul");
+    const li1 = document.createElement("li");
+    li1.textContent = "Home";
+    const li2 = document.createElement("li");
+    li2.textContent = "About";
+    const li3 = document.createElement("li");
+    li3.textContent = "Blog";
+
+    nav.append(ul);
+    ul.append(li1);
+    ul.append(li2);
+    ul.append(li3);
+
+    const elements = [p, div, nav];
+
+    setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * elements.length);
+
+      // clear out the body
+      for (const child of document.body.children) {
+        child.remove();
+      }
+
+      // add random element to the body
+
+      document.body.append(elements[randomIndex])
+
+    }, 1000);
+  </script>
+</body>
