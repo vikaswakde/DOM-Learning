@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Hello Attributes</title>
+  <body>
+    <h1>This Page Belongs to Learnign About Attributes!</h1>
+    <script>
+      const h1 = document.querySelector("h1");
+      h1.setAttribute("style", "colr: red");
+
+      setInterval(() => {
+        if (h1.style.color === "red") {
+          h1.setAttribute("style", "color: yellow");
+        } else {
+          h1.setAttribute("style", "color:red");
+        }
+      }, 1000);
+    </script>
+    <input type="text" />
+    <button>Say Hello</button>
+  </body>
+</head>
